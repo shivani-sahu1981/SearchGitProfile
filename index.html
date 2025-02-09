@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchgitprofile</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 class="glowing-text" >GitProfileSearch</h1>
+        </div>
+        <div class="input">
+            <input type="text" id="user" placeholder="Enter Your ID/URL">
+        </div>
+        <div class="button">
+            <button onclick="profile()" id="btn">Search</button>
+        </div>
+        <div class="profile">
+            <a href="" id="ans"></a>
+        </div>    
+    </div>
+
+    <script>
+        let url = document.getElementById("user");
+        let ans = document.getElementById("ans");
+
+        function profile(){
+            ans.href = "http://github.com/" + url.value;
+            document.getElementById("ans").innerHTML ="viewprofile";
+        }
+    </script>
+
+</body>
+</html>
